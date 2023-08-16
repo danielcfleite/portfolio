@@ -90,6 +90,7 @@ body {
 .pg1 {
   width: 100vw;
   height: 100vh;
+  margin-top: -4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -110,8 +111,8 @@ body {
 } */
 
 #me {
-  width: 186px;
-  height: 186px;
+  width: 230px;
+  height: 230px;
   border-radius: 50%;
   border: solid 2px var(--purple);
   filter: drop-shadow(-4px 3px 10px rgba(123, 31, 162, 0.5));
@@ -185,7 +186,6 @@ li > .color {
 #start {
   border-style: none;
   background-color: transparent;
-  margin-top: 1rem;
   border: 2px solid var(--purple);
   border-radius: 9px;
   padding: 2rem 4rem;
