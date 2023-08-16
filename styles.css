@@ -84,7 +84,7 @@ body {
   background-color: var(--bg);
   display: inline-block;
   color: var(--font-color);
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .pg1 {
