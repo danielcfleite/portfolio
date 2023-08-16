@@ -84,6 +84,7 @@ body {
   background-color: var(--bg);
   display: inline-block;
   color: var(--font-color);
+  overflow: hidden;
 }
 
 .pg1 {
@@ -91,9 +92,8 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  gap: 4%;
 }
 
 /* .bg-img {
@@ -124,6 +124,12 @@ body {
   font-size: 4rem;
   font-weight: bold;
 } */
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .wrapper {
   display: inline-flex;
