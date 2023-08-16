@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap");
+
+:root {
+  --font: "Rubik", sans-serif;
+  --bg: #121212;
+  --font-color: white;
+  font-size: 62.5%;
+  --purple: rgb(123, 31, 162);
+  --violet: rgb(103, 58, 183);
+  --pink: rgb(244, 143, 177);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font);
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(10deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-6deg);
+  }
+  30% {
+    transform: rotate(10deg);
+  }
+  40% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(8deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes typing {
+  100% {
+    left: 100%;
+    margin: 0 -35px 0 35px;
+  }
+}
+
+@keyframes slide {
+  100% {
+    top: -20rem;
+  }
+}
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+
+  to {
+    background-position: -200% center;
+  }
+}
+
+/*@keyframes pan-image {
+  0% {
+    background-position: 0% 100%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+  100% {
+    background-position: 0% 100%;
+  }
+} */
+
+body {
+  background-color: var(--bg);
+  display: inline-block;
+  color: var(--font-color);
+}
+
+.pg1 {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4%;
+}
+
+/* .bg-img {
+  background-image: url("https://images.unsplash.com/photo-1519608487953-e999c86e7455?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80");
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  background-size: 300%;
+  background-position: 0% 0%;
+  filter: sepia(100%) hue-rotate(160deg);
+  opacity: 0.07;
+  animation: pan-image 120s linear infinite;
+} */
+
+#me {
+  width: 186px;
+  height: 186px;
+  border-radius: 50%;
+  border: solid 2px var(--purple);
+  filter: drop-shadow(-4px 3px 10px rgba(123, 31, 162, 0.5));
+}
+
+/* h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 4rem;
+  font-weight: bold;
+} */
+
+.wrapper {
+  display: inline-flex;
+  height: 4rem;
+}
+
+.wrapper .dynamic-texts {
+  overflow: hidden;
+}
+
+.dynamic-texts > li {
+  list-style: none;
+  font-size: 4rem;
+  font-weight: bold;
+  animation: slide 6s steps(4) infinite;
+  position: relative;
+  top: 0;
+  align-self: center;
+  text-align: center;
+}
+
+.dynamic-texts li span {
+  position: relative;
+}
+
+.dynamic-texts li span::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-left: 2px solid var(--purple);
+  left: 0;
+  animation: typing 1.5s steps(15) infinite;
+  background-color: var(--bg);
+}
+
+li > .color {
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient(
+    to right,
+    var(--purple),
+    var(--violet),
+    var(--pink),
+    var(--purple)
+  );
+  background-size: 200%;
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#start {
+  border-style: none;
+  background-color: transparent;
+  margin-top: 1rem;
+  border: 2px solid var(--purple);
+  border-radius: 9px;
+  padding: 2rem 4rem;
+}
+
+#start h2 {
+  font-size: 2.2rem;
+  color: white;
+  font-weight: 500;
+}
+
+.wave {
+  animation-name: wave-animation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
