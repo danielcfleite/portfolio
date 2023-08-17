@@ -168,7 +168,7 @@ body {
   background-color: var(--bg);
 }
 
-li > .color {
+.color {
   animation: background-pan 3s linear infinite;
   background: linear-gradient(
     to right,
@@ -203,4 +203,97 @@ li > .color {
   animation-iteration-count: infinite;
   transform-origin: 70% 70%;
   display: inline-block;
+}
+
+.pg2 {
+  height: 100vh;
+  width: 100vw;
+  z-index: 2;
+  top: 0;
+  position: fixed;
+  flex-direction: column;
+  background-color: var(--bg);
+}
+
+.pg2-cnt {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  z-index: 2;
+  padding: 4rem;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.about > h1 {
+  font-size: 3.5rem;
+}
+
+.about > span {
+  font-size: 1.5rem;
+}
+
+.about > p {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  width: 80%;
+}
+
+nav {
+  height: 100%;
+  width: 2rem;
+  z-index: 3;
+  position: fixed;
+  left: 0.5rem;
+  border-left: 2px solid rgba(236, 236, 236, 0.091);
+}
+
+.ball {
+  z-index: 4;
+  position: fixed;
+  top: 0;
+  color: white;
+  width: 50rem;
+  height: 50rem;
+  border-radius: 50%;
+  border: 1rem solid #121212;
+}
+
+#about-img {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 0.3rem;
+}
+
+.about > h2 {
+  margin-top: 2rem;
+}
+
+.about > h3 {
+  margin-top: 1.5rem;
+}
+
+.img-proj {
+  display: flex;
+}
+
+.img-proj img:last-of-type {
+  z-index: 4;
+  position: fixed;
+  margin-left: 40%;
+  margin-bottom: 30%;
+  width: 10rem;
+  height: 10rem;
+}
+
+.img-proj > img {
+  width: 50%;
+  height: 50%;
 }
