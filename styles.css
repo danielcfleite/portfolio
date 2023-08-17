@@ -258,13 +258,25 @@ body {
 }
 
 nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
   height: 5rem;
   top: 0;
   width: 100%;
   z-index: 3;
   position: absolute;
-  left: 0.5rem;
+  left: 0;
   border-bottom: 2px solid rgba(236, 236, 236, 0.091);
+  justify-content: space-around;
+  padding: 0 3rem;
+}
+
+nav a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
 }
 
 .ball {
@@ -281,8 +293,6 @@ nav {
 #about-img {
   border-radius: 50%;
   position: relative;
-  margin-top: 2rem;
-  margin-left: 1%;
   width: 2rem;
   height: 2rem;
   background-color: var(--bg);
