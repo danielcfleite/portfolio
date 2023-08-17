@@ -228,11 +228,13 @@ body {
 .pg2-cnt {
   height: 100%;
   width: 100%;
+  margin-top: 5vh;
   display: flex;
   justify-content: start;
   align-items: start;
   z-index: 2;
   padding: 4rem;
+  overflow-y: scroll;
 }
 
 .about {
@@ -256,12 +258,13 @@ body {
 }
 
 nav {
-  height: 100%;
-  width: 2rem;
+  height: 5rem;
+  top: 0;
+  width: 100%;
   z-index: 3;
-  position: fixed;
+  position: absolute;
   left: 0.5rem;
-  border-left: 2px solid rgba(236, 236, 236, 0.091);
+  border-bottom: 2px solid rgba(236, 236, 236, 0.091);
 }
 
 .ball {
@@ -277,9 +280,12 @@ nav {
 
 #about-img {
   border-radius: 50%;
+  position: relative;
+  margin-top: 2rem;
+  margin-left: 1%;
   width: 2rem;
   height: 2rem;
-  margin-left: 0.3rem;
+  background-color: var(--bg);
 }
 
 .about > h2 {
