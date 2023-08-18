@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap");
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 :root {
@@ -217,10 +217,10 @@ body {
 
 .pg2 {
   height: 100vh;
-  width: 100vw;
+  width: 90vw;
   z-index: 2;
   top: 0;
-  position: fixed;
+
   flex-direction: column;
   background-color: var(--bg);
 }
