@@ -219,7 +219,7 @@ body {
   height: 100vh;
   width: 100vw;
   z-index: 2;
-  top: -150vh;
+  top: 0;
   position: fixed;
   flex-direction: column;
   background-color: var(--bg);
@@ -235,6 +235,7 @@ body {
   z-index: 2;
   padding: 4rem;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .about {
@@ -273,7 +274,7 @@ nav {
   top: 0;
   width: 85%;
   z-index: 3;
-  position: absolute;
+  position: fixed;
   left: 0;
   border-bottom: 2px solid rgba(236, 236, 236, 0.091);
   justify-content: space-around;
