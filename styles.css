@@ -252,9 +252,17 @@ body {
 }
 
 .about > p {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   margin-top: 2rem;
   width: 80%;
+}
+
+.pg2 h3 {
+  font-size: 1.6rem;
+}
+
+.pg2 h2 {
+  font-size: 1.6rem;
 }
 
 nav {
@@ -270,6 +278,7 @@ nav {
   border-bottom: 2px solid rgba(236, 236, 236, 0.091);
   justify-content: space-around;
   padding: 0 3rem;
+  background-color: var(--bg);
 }
 
 nav a {
@@ -306,20 +315,7 @@ nav a {
   margin-top: 1.5rem;
 }
 
-.img-proj {
-  display: flex;
-}
-
-.img-proj img:last-of-type {
-  z-index: 4;
-  position: fixed;
-  margin-left: 40%;
-  margin-bottom: 30%;
-  width: 10rem;
-  height: 10rem;
-}
-
-.img-proj > img {
-  width: 50%;
-  height: 50%;
+.img-proj img {
+  width: 70vw;
+  height: 15Srem;
 }
