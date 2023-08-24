@@ -76,19 +76,14 @@
   }
 }
 
-/*@keyframes pan-image {
-  0% {
-    background-position: 0% 100%;
-  }
-
-  50% {
-    background-position: 100% 100%;
-  }
-
+@keyframes project-presentation {
   100% {
-    background-position: 0% 100%;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
   }
-} */
+}
 
 body {
   background-color: var(--bg);
@@ -324,4 +319,218 @@ nav a {
 .img-proj img {
   width: 70vw;
   height: 15Srem;
+}
+
+@media screen and (min-width: 768px) {
+  .socials {
+    z-index: 2;
+    display: flex;
+    width: 10vw;
+    height: 12vh;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: -2rem;
+    border: 1px solid white;
+    border-radius: 9px;
+    margin-left: 10%;
+    background-color: var(--bg);
+  }
+
+  .nav-desk {
+    width: 100vw;
+    height: 7vh;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    background-color: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    opacity: 0.8;
+    transition: 0.5s;
+  }
+
+  .nav-btns {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 200;
+    background: none;
+    border: none;
+    border-style: none;
+  }
+
+  .nav-btns > a {
+    text-decoration: none;
+    color: rgb(255, 255, 255, 0.5);
+    font-size: 2rem;
+    transition: 0.6s;
+  }
+
+  .nav-btns > a:hover {
+    color: rgb(255, 255, 255, 1);
+    transform: scale(1.1);
+  }
+
+  .sound-btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 5vw;
+    position: fixed;
+    right: 1rem;
+    top: 2.5rem;
+    z-index: 3;
+  }
+
+  .sound-btns > button {
+    border: none;
+    background: none;
+  }
+
+  .sound-btns > button > a {
+    color: var(--font-color);
+    text-decoration: none;
+    font-size: 2.5rem;
+  }
+
+  .sound-btns > button > a:hover {
+    animation: background-pan 1.5s linear infinite;
+    background: linear-gradient(
+      to right,
+      rgb(153, 46, 199),
+      rgb(196, 110, 233),
+      var(--pink),
+      rgb(153, 46, 199)
+    );
+    background-size: 200%;
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.1);
+  }
+
+  #back {
+    z-index: 0;
+    position: fixed;
+    top: 50%;
+    left: 10rem;
+    border: none;
+    background: none;
+    padding: 2rem;
+    background-color: var(--bg);
+    border-radius: 4px;
+    transition: 0.5s;
+  }
+
+  #back:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  #back > a {
+    color: var(--font-color);
+    text-decoration: none;
+    font-size: 5rem;
+  }
+
+  #forward {
+    z-index: 0;
+    position: fixed;
+    top: 50%;
+    right: 10rem;
+    border: none;
+    background: none;
+    padding: 2rem;
+    background-color: var(--bg);
+    border-radius: 4px;
+    transition: 0.5s;
+  }
+
+  #forward > a {
+    color: var(--font-color);
+    text-decoration: none;
+    font-size: 5rem;
+  }
+
+  #forward:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  .socials > a {
+    font-size: 4rem;
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+
+  .socials > a:hover {
+    animation: background-pan 1.5s linear infinite;
+    background: linear-gradient(
+      to right,
+      rgb(153, 46, 199),
+      rgb(196, 110, 233),
+      var(--pink),
+      rgb(153, 46, 199)
+    );
+    background-size: 200%;
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.1);
+  }
+
+  body {
+    max-height: 100vh;
+    overflow: hidden;
+  }
+
+  .pg1 {
+    display: none;
+  }
+
+  .pg2 {
+    display: none;
+  }
+
+  #projects-desktop {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+  }
+
+  #image-track {
+    z-index: 2;
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    user-select: none;
+    transition: 1s;
+  }
+
+  #image-track > .image {
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: 100% center;
+    transition: 0.5s;
+  }
+
+  .image:hover {
+    transform: scale(1.1);
+  }
+
+  .bg {
+    opacity: 0;
+    width: 100vw;
+    position: fixed;
+    transition: 2s;
+  }
 }
